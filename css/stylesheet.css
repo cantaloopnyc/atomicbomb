@@ -1,0 +1,620 @@
+
+body {
+    margin-top: 40px; 
+    text-align: center;
+    font-family: 'Exo 2', sans-serif;
+    background-size: 60%;
+    background: radial-gradient(#102,#000);
+    background-repeat: no-repeat;
+    color: white;
+    background-color: black;
+    height: 100%;
+
+}
+nav {
+    position: relative;
+    margin: 0 auto;
+}
+
+#index {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+#background {
+    /*width: 50px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+    transition: 0.75s;
+    max-width: 500px;
+    max-height: 550px;
+    
+}
+
+#middleindex {
+  position: fixed;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+#atomicbomb {
+    font-family: 'Audiowide';
+    font-size: 60px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+color: rgb(255, 255, 255);
+background-color: rgb(51, 51, 51,);
+text-shadow: rgb(255, 255, 255) 0px 0px 5px, 
+            rgb(255, 255, 255) 0px 0px 10px, rgb(255, 255, 255) 0px 0px 15px, rgb(255, 45, 149) 0px 0px 20px, rgb(255, 45, 149) 0px 0px 30px, rgb(255, 45, 149) 0px 0px 30px, rgb(255, 45, 149) 0px 0px 40px, rgb(255, 45, 149) 0px 0px 75px;
+}
+
+#atomicbomb:hover{
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+    
+}
+#wrestlingphotography {
+    font-family: 'Audiowide';
+    font-size: 25px;
+    margin: 0;
+    padding: none;
+    color: indigo;
+    background-color: rgb(51, 51, 51,);
+}
+
+.menu {
+    display: inline-block;
+    /*background:  rgb(0,0,0,0);
+    */
+}
+/*
+#malebutton {
+    display: inline-block;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 22px;
+    float: left;
+    color: #fff;
+    padding: 19px;8;
+} */
+
+.btn {
+    display: inline-block;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 22px;
+    float: left;
+    color: white;
+    padding: 5px 70px 5px 70px;
+    top: 45px;
+    
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+    
+}
+a:visited {
+    color: white;
+}
+
+a:active {
+color: magenta;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: none;
+    text-shadow: 0 0 100px hotpink, 0 0 100px blue;
+
+}
+
+
+
+.ropetop2 {
+    width:1000px;
+    height: 40px;
+    position:right;
+}
+
+#ropetop2 img {
+    width:90%;
+    height: 30%;
+    position:right;
+}
+#ropetop1 {
+    position: relative;
+    height: 80px;
+    background-image:url("images/ropetop1.png");
+    background-size: 100%;
+}
+#ropetop1 img{
+    width:90%;
+    height: 100%;
+    position:center;
+}
+
+
+#headings {
+    position: absolute;
+    top: 8.5%;
+    left: 19.5%;
+}
+
+
+#middle {
+    width: 1000px;
+    height: 600px;
+    margin: auto;
+    position: relative;
+    font-size: 18px;
+    
+}
+
+#middleabout {
+    width: 1000px;
+    height: 680px;
+    margin: auto;
+    position: relative;
+    font-size: 18px;
+
+
+    
+}
+img {
+    no-repeat;
+}
+
+#gallery {
+    margin: auto;
+     width:1100px;
+    height: 600px;
+    margin: center;
+    position: center;
+
+
+}
+#thumbs {
+    width:150px;
+    height:150px;
+    border: 1px magenta;
+    padding: 5px;
+    float: left;
+    margin: 5px;
+}   
+ 
+#thumbs img:hover{
+    opacity: 1;
+    transform: rotate(2deg);
+}
+
+#thumbs img {
+    display: block;
+    width:100%;
+    height: 100%;
+    border-radius:15px;
+    opacity: 0.6;
+  transition: 0.3s;
+    
+}
+
+.lightbox {
+
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(176,66,244,.15);
+    height: 100%;
+    width: 100%;
+}
+
+.lightbox:target {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s;
+    
+}
+#outer {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    margin-top: none;
+    padding: 5px;
+    border-radius:15px;
+    position: relative;
+    
+}
+
+#lightbox03 #inner {
+    width: 900px;
+    height: 600px;
+    margin: auto;
+    margin-top: none;
+    padding: 5px;
+    border-radius:15px;
+
+}
+
+#lightbox010 #inner {
+    width: 400px;
+    height: 675px;
+    margin: auto;
+    margin-top: none;
+    padding: 5px;
+    border-radius:15px;
+}
+
+#lightbox012 #inner {
+    width: 660px;
+    height: 680px;
+    margin: auto;
+    margin-top: none;
+    padding: 5px;
+    border-radius:15px;
+}
+
+#lightbox014 #inner {
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    margin-top: none;
+    padding: 5px;
+    border-radius:15px;
+
+}
+
+#lightbox018 #inner {
+    width: 450px;
+    height: 650px;
+    margin: auto;
+    margin-top: none;
+    padding: 5px;
+    border-radius:15px;
+}
+
+
+#lightbox019 #inner {
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    margin-top: none;
+    padding: 5px;
+    border-radius:15px;
+}
+
+
+#lightboxa02 #inner {
+    width: 700px;
+    height: 500px;
+    margin: auto;
+    margin-top: none;
+    padding: 5px;
+    border-radius:15px;
+}
+
+
+#lightboxa08 #inner {
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    margin-top: none;
+    padding: 5px;
+    border-radius:15px;
+
+
+}
+#lightboxa011 #inner {
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    margin-top: none;
+    padding: 5px;
+    border-radius:15px;
+}
+
+
+#lightboxa014 #inner {
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    margin-top: none;
+    padding: 5px;
+    border-radius:15px;
+}
+
+
+#lightboxa016 #inner {
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    margin-top: none;
+    padding: 5px;
+    border-radius:15px;
+}
+
+#lightboxa020 #inner {
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    margin-top: none;
+    padding: 5px;
+    border-radius:15px;
+
+}
+#inner {
+    width: 500px;
+    height: 700px;
+    margin: auto;
+    margin-top: none;
+    padding: 5px 5px 0px 5px;
+    border-radius:15px;
+    box-shadow: 0px 0px 65px black;
+    position: fixed;
+    color: rgb(223,66,244,1);
+    font-size: 18px;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+    
+}
+
+#inner img {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    display: block;
+    position: center;
+    repeat: no-repeat;
+        border-radius:15px;
+
+
+}
+marquee {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 0;
+  background: black;
+}
+
+marquee img {
+  width: 100%;
+}
+
+#previous {
+float: left;
+position: absolute;
+    font-size: 200px;
+    color: rgb(223,66,244,.5);
+    top: 30%;
+    left: 8%;
+}
+
+#next {
+    float:right;
+    font-size: 200px;
+    color: rgb(223,66,244,.5);
+    position: absolute;
+    left: 86%;
+    top: 30%;
+}
+
+
+.wrestlers {
+    position: relative;
+    top: -10%;
+    left: 20%;
+    color: white;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 20px;
+}
+
+li:hover {
+    cursor: pointer;
+    background-color: none;
+    text-shadow: 0 0 100px white, 0 0 100px white;
+}
+
+.moves {
+    position: relative;
+    top: 16%;
+    left: 47%;
+    color: white;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 20px;
+        text-decoration: bold;
+
+}
+
+.moves:hover {
+    cursor: pointer;
+    background-color: none;
+    text-shadow: 0 0 100px yellow, 0 0 100px yellow;
+}
+
+.man {
+    position: relative;
+    top: 16%;
+    left: 56%;
+    color: white;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 20px;
+    text-decoration: bold;
+}
+.man:hover {    
+    cursor: pointer;
+    background-color: none;
+    text-shadow: 0 0 100px crimson, 0 0 100px crimson;
+
+}
+
+#peterfade {
+    position: absolute;
+    margin: 0 auto;
+    top: 40%;
+    width: 700px;
+    height: 500px;
+    background-color: none;
+    left: 0;
+    top: 0;
+    
+}
+
+#peterfade img {
+    position: absolute;
+    margin: 0 auto;
+    top: 3%;
+    left: 29%;
+    width: 700px;
+    height: 670px;
+    border: none;
+    transition: opacity 0.5s ease-in-out;
+    
+}
+
+#peterfade img:hover {
+    opacity: 0;
+}
+
+#peterblurb1 {
+    position: absolute;
+    top: 10px;
+    left: 130px;
+    background-color: none;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#peterblurb2 {
+    position: absolute;
+    top: 14%;
+    left: 7%;
+    background-color: none;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#peterblurb3 {
+    position: absolute;
+    top:30%;
+    left: 47%;
+    background-color: none;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#peterblurb4 {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    background-color: none;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#peterblurb5 {
+    position: absolute;
+    top: 56%;
+    left: 40%;
+    background-color: none;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#peterblurb6 {
+    position: absolute;
+    top: 62%;
+    left: 62%;
+    background-color: none;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#peterblurb7 {
+    position: absolute;
+    top: 72%;
+    left: 27%;
+    background-color: none;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#peterblurb8 {
+    position: absolute;
+    top: 85%;
+    left: 15%;
+    background-color: none;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+span {
+    font-size: 12px;
+}
+
+#peterblurb8 {
+    position: center;
+    left: 43%;
+}
+
+.socialmedia {
+    width:50px;
+    height:50px;
+    display: inline-block;
+    border: 1px;
+    padding: 1px;
+}
+
+.socialmedia img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.menu {
+    color: white;
+    list-style: none;
+    text-align: center;
+    width: 80%;/*new*/
+    left: 7%;
+    top: 14%;
+    position: absolute;
+
+    
+}
+
+.menu > li {
+    display: inline;
+    padding-right: 50px;
+    padding-left: 50px;
+    font-size: 22px;
+font-family: 'Audiowide', sans-serif;
+
+    
+}
+
